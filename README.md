@@ -1,5 +1,3 @@
----
-
 # Web Design and Development Lead Filter
 
 **Web Design and Development Lead Filter** is a Python tool designed to filter leads for web design and development companies. It helps lead generation teams quickly identify companies offering these services by scanning their websites for relevant keywords. The program processes a list of companies, checks their websites for specific terms, and determines whether they are web design or development-focused.
@@ -100,5 +98,5 @@ I created this project while freelancing for a lead generation company. My role 
 
 This is now version 5 of the tool, which has improved over time to handle issues like scraping websites protected by Cloudflare. I’ve learned a lot about web scraping, Python, and data processing during this journey.
 
----
+
 
