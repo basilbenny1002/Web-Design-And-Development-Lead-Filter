@@ -226,9 +226,9 @@ def main(companies, links):
         concurrent.futures.wait(futures)
 
 # Load companies and URLs from CSV file
-input_file = "Fullfilledge USA - Fort Wayne, IN(Finished)proper one.csv" #replace with input file path (Must be a CSV)
-output_file = "output.csv" #replace with output file path
-df = pd.read_csv(input_file)
+input_filename = "Fullfilledge USA - Fort Wayne, IN(Finished)proper one.csv" #replace with input file path (Must be a CSV)
+output_filename = "output.csv" #replace with output file path
+df = pd.read_csv(input_filename)
 companies = df['BusinessName'].tolist()
 links = df['WebsiteURL'].tolist()
 
@@ -240,5 +240,5 @@ except Exception as e:
     print(f"An error occurred: {e}")
 finally:
     output_file = pd.DataFrame(output, columns=["Company Name", "WebsiteUrl", "Keywords", "Chosen"])
-    output_file.to_csv(path_or_buf=output_file, index=False)
+    output_file.to_csv(output_filename, index=False)
     print(f"Finished going through a list of {len(companies)}, found valid websites for {created} and finished cleaning")
