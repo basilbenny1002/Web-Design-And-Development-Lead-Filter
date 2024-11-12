@@ -1,0 +1,6 @@
+cloudscraper~=1.2.71
+requests~=2.32.2
+bs4~=0.0.2
+keyboard~=0.13.5
+pandas~=2.2.2
+spacy~=3.8.2
