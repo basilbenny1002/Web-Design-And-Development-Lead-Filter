@@ -1,83 +1,104 @@
+---
 
-
-```markdown
 # Web Design and Development Lead Filter
 
-**Web Design and Development Lead Filter** is a Python tool designed to filter leads for web design and development companies by analyzing company websites. Created specifically for lead generation, this program processes lists of companies, examines their websites, and identifies those offering web design or development services based on a predefined set of keywords.
+**Web Design and Development Lead Filter** is a Python tool designed to filter leads for web design and development companies. It helps lead generation teams quickly identify companies offering these services by scanning their websites for relevant keywords. The program processes a list of companies, checks their websites for specific terms, and determines whether they are web design or development-focused.
+
+---
 
 ## Features
-- Extracts and scans HTML content from company websites
-- Identifies keywords related to web design and development to filter relevant companies
-- Supports multithreaded processing for faster lead filtering
-- Outputs results to CSV, showing which companies were chosen based on criteria
+
+- Extracts and scans HTML content from company websites.
+- Identifies relevant keywords related to web design and development.
+- Supports multithreaded processing for faster lead filtering.
+- Outputs results to a CSV file, showing whether each company is a lead based on the given criteria.
+
+---
 
 ## License
-This project is released under the [MIT License](https://opensource.org/licenses/MIT), allowing free usage, modification, and distribution. For commercial use, permission is required. Please contact me at basilbenny1002@gmail.com.
+
+This project is released under the MIT License, allowing free usage, modification, and distribution. Commercial use is allowed, but permission must be sought for such cases. For more information, please contact me at basilbenny1002@gmail.com.
+
+---
 
 ## Input Requirements
-- The input file must be a CSV with the following columns:
-  - **BusinessName**: Company name
-  - **WebsiteURL**: Company website URL
 
-Example `input.csv`:
+The input file should be a CSV with the following columns:
 
-```csv
-BusinessName,WebsiteURL
-Example Company,https://example.com
-Web Design Co,https://webdesignco.com
-Web Development Inc,https://webdevinc.com
-```
+- **BusinessName**: The company’s name.
+- **WebsiteURL**: The URL of the company’s website.
 
-**Note:** The name of the input and output files can be edited directly in the code.
+Example input CSV (`input.csv`):
+
+| BusinessName | WebsiteURL             |
+|--------------|------------------------|
+| Example Company | https://example.com   |
+| Web Design Co | https://webdesignco.com |
+| Web Development Inc | https://webdevinc.com |
+
+**Note:** The names of the input and output files can be edited directly in the code.
+
+---
 
 ## Setup and Installation
 
-1. **Clone this repository** to your local machine:
-   ```bash
+Follow these steps to set up and run the program:
+
+1. **Clone this repository**:
+   ```
    git clone https://github.com/yourusername/Web-Design-And-Development-Lead-Filter.git
    ```
 
 2. **Navigate to the project folder**:
-   ```bash
+   ```
    cd Web-Design-And-Development-Lead-Filter
    ```
 
 3. **Install required dependencies**:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
-   Required libraries include `cloudscraper`, `spaCy`, and others specified in the `requirements.txt`.
+   This will install libraries like `cloudscraper`, `spaCy`, and other necessary packages.
 
-4. **Download spaCy language model** (optional, required only for word similarity):
-   ```bash
+4. **Download the spaCy language model** (only needed if you're using the word similarity feature):
+   ```
    python -m spacy download en_core_web_sm
    ```
+
    You can choose from the following spaCy models:
-   - **small model**: `en_core_web_sm`
-   - **medium model**: `en_core_web_md`
-   - **large model**: `en_core_web_lg`
+
+   - **Small model**: `en_core_web_sm`
+   - **Medium model**: `en_core_web_md`
+   - **Large model**: `en_core_web_lg`
+
+---
 
 ## Running the Program
 
-1. **Prepare your input CSV** file as specified above and place it in the root folder of the project.
+1. **Prepare your input CSV file** as mentioned above and place it in the root folder of the project.
 
-2. **Execute the main script**:
-   ```bash
+2. **Run the program**:
+   ```
    python main.py
    ```
 
-3. **Output**: The program will generate a CSV output containing filtered leads based on keywords:
-   - **Company Name**: The name of the business.
-   - **Website URL**: URL of the business website.
-   - **Keywords**: Identified keywords related to web design or development services.
-   - **Chosen**: Yes, No, or Unsure depending on whether the company was flagged as a web design or development lead:
-     - **Yes**: Company fits the web design or development criteria.
-     - **No**: Company does not meet the criteria.
-     - **Unsure**: Unable to determine based on the given criteria.
+3. **Output**: The program will generate an output CSV file with the following columns:
+
+   - **Company Name**: The business name.
+   - **Website URL**: The URL of the business website.
+   - **Keywords**: The relevant keywords found on the website.
+   - **Chosen**: A flag indicating whether the company was chosen based on its web design or development services:
+     - **Yes**: The company meets the criteria.
+     - **No**: The company does not meet the criteria.
+     - **Unsure**: The program couldn’t determine based on the keywords.
+
+---
 
 ## How This Project Came to Be
-This project was created as a solution to a specific problem I encountered while freelancing for a lead generation company. My task involved analyzing and cleaning up leads to identify companies providing web design and development services. The manual filtering process was inefficient, so I developed this program to automate it.
 
-Now in version 5, this program has evolved through multiple iterations, with improvements made to handle issues like scraping Cloudflare-protected sites. The process taught me a lot about Python, web scraping, and handling large datasets efficiently.
+I created this project while freelancing for a lead generation company. My role involved cleaning up leads to identify web design and development companies. The process was manual and inefficient, so I developed this program to automate the task and make the process faster and more accurate.
 
-If you have any questions, suggestions, or wish to discuss commercial use, feel free to reach out!
+This is now version 5 of the tool, which has improved over time to handle issues like scraping websites protected by Cloudflare. I’ve learned a lot about web scraping, Python, and data processing during this journey.
+
+---
+
