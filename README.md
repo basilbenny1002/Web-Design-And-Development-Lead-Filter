@@ -44,7 +44,7 @@ Follow these steps to set up and run the program:
 
 1. **Clone this repository**:
    ```
-   git clone https://github.com/yourusername/Web-Design-And-Development-Lead-Filter.git
+   git clone https://github.com/basilbenny1002/Web-Design-And-Development-Lead-Filter.git
    ```
 
 2. **Navigate to the project folder**:
